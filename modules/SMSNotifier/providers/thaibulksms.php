@@ -14,7 +14,7 @@ class SMSNotifier_thaibulksms_Provider implements SMSNotifier_ISMSProvider_Model
 	private $password;
 	private $parameters = array();
 
-	const SERVICE_URI = 'http://www.thaibulksms.com/sms_api.php';
+	const SERVICE_URI = 'https://api-v2.thaibulksms.com/sms';
 	private static $REQUIRED_PARAMETERS = array();
 
 	/**
