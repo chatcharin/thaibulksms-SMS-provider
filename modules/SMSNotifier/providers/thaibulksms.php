@@ -108,6 +108,7 @@ class SMSNotifier_thaibulksms_Provider implements SMSNotifier_ISMSProvider_Model
 
 		$serviceURL = $this->getServiceURL(self::SERVICE_SEND);
 		$httpClient = new Vtiger_Net_Client($serviceURL);
+		$httpClient->setHeaders(array('Authorization' => 'Basic '.base64_encode($params['AccountSID'].':'.$params['AuthToken'])));
 		$response = $httpClient->doPost($params);
 		$responseLines = split("\n", $response);
 
